@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0d2f5a;
+    --primary-color-light: #00449c;
+    --secundary-color: #f5f5f5;
+    --dark-color: #1e1e1e;
+    --font-tittle: 3.5rem;
+    --font-tittle2: 2.5rem;
+    --font-size: 2rem;
+    --font-size2: 1rem;
+    --font-size3: 0.7rem;
+    --transition: all 0.4s ease;
+    --background: linear-gradient(90deg, #000000, #1e1e1e, #000000);
+    --background2: linear-gradient(90deg, #dbdbdb, #f5f5f5, #dbdbdb);
+    --border-radius: 10px
+}
+
+
+body {
+    font-family: "Bai Jamjuree";
+    background: var(--secundary-color);
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 720px;
+    position: relative;
+    background: url('../assets/img/NOÉ.png') no-repeat center center/cover;
+    z-index: 0;
+}
+
+.btn button {
+    margin: 40px;
+    width: 120px;
+    height: 35px;
+    color: var(--secundary-color);
+    background: transparent;
+    border: 2px solid;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn button:hover {
+    color: #000000;
+    transform: scale(1.05);
+}
+
+header {
+    display: flex;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    margin: 60px;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--secundary-color);
+    transition: var(--transition);
+    font-size: var(--font-size2);
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.nav-active {
+    text-decoration: underline;
+
+}
+
+.logo img {
+    display: flex;
+    width: 150px;
+}
+
+.hero-destaque {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.title {
+    color: var(--secundary-color);
+    font-size: var(--font-tittle);
+    font-weight: 400;
+    animation: text 15s infinite;
+
+}
+
+.subtitle {
+    color: #f5f5f5f5;
+    font-size: var(--font-size);
+    font-weight: 400;
+    animation: text 15s infinite;
+}
+
+
+/* escurecer a img */
+/* .hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000036;
+} */
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 1;
+}
+
+.scroll-down a {
+    color: white;
+    font-size: 24px;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0) translateX(-50%);
+    }
+
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes text {
+
+
+    60% {
+        transform: scale(1.1);
+
+    }
+
+}
+
+
+
+/* style app */
+#error {
+    color: var(--secundary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#error h1 {
+    font-size: var(--font-tittle);
+}
+
+#error span {
+    color: red;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px;
+    background: url('../assets/img/NOÉ.png') no-repeat bottom center/cover;
+    background-size: 3000px;
+    color: var(--secundary-color);
+}
+
+footer .logo img {
+    width: 100px;
+}
+
+footer .ctn-footer {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.ctn-equipe {
+    display: flex;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--light-color);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    border: 1px solid var(--secundary-color);
+    transform: translateY(-5px);
+}
+
+footer .equipe {
+    margin: 15px;
+    list-style: none;
+}
+
+footer .equipe li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--light-color);
+}
+
+.direitos h4 {
+    font-size: var(--font-size2);
+    font-weight: 400;
+}
+
+.direitos span a {
+    text-decoration: none;
+    color: var(--light-color);
+    transition: var(--transition);
+}
+
+.direitos span a:hover {
+    text-decoration: underline;
+}
