@@ -25,17 +25,23 @@
 
             <!-- navegação -->
             <nav>
-                <ul>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="./index.html" class="nav-active">home</a></li>
                     <li><a href="#sobre">sobre-nós</a></li>
                     <li><a href="./src/pages/app.html">download</a></li>
                     <li><a href="#">suporte</a></li>
                     <li><a href="#">contato</a></li>
                 </ul>
+
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
             </nav>
         </header>
 
-        <!-- destaque -->
+        <!-- inicio destaque -->
         <section class="hero" id="home">
             <section class="hero-destaque">
                 <h1 class="title">NOÉ</h1>
@@ -50,72 +56,162 @@
             </div>
         </section>
 
-        <section class="conteudo">
-            <article id="info-bar">
-                
-                <div id="info">
-                    <h1>+21.000</h1>
-                    <h2>acidentes registrados em 2024</h2>
-                    <h3>parelelepipedo é marrom</h3>
-                </div>
+        <!-- informações -->
+        <div class="secao1">
+            <section id="info-bar">
 
-                <div id="info">
+                <article id="info">
                     <h1>+21.000</h1>
-                    <h2>acidentes registrados em 2024</h2>
-                    <h3>parelelepipedo é marrom</h3>
-                </div>
+                    <h3>Enchentes registradas no Brasil (1991-2022)</h3>
+                </article>
 
-                <div id="info">
-                    <h1>+21.000</h1>
-                    <h2>acidentes registrados em 2024</h2>
-                    <h3>parelelepipedo é marrom</h3>
-                </div>
+                <article id="info">
+                    <h1>48h</h1>
+                    <h3>Antecedência para alertas</h3>
+                </article>
 
-                <div id="info">
-                    <h1>+21.000</h1>
-                    <h2>acidentes registrados em 2024</h2>
-                    <h3>parelelepipedo é marrom</h3>
-                </div>
-            </article>
+                <article id="info">
+                    <h1>70%</h1>
+                    <h3>Redução no tempo de evacuação</h3>
+                </article>
 
-            <article id="cards">
-                <div id="info-card">
-                    <h1>Informação Aleatoria</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos asperiores officia quidem obcaecati iure, sint inventore eius quae! Labore tempora tempore voluptates, recusandae harum enim amet velit beatae ab omnis. Asperiores minus sint dolore distinctio, sed alias animi cupiditate nisi veniam, possimus ea laborum odio odit temporibus commodi magni voluptates amet consequatur.</h2>
+                <article id="info">
+                    <h1>90%</h1>
+                    <h3>Cobertura em áreas vulneráveis</h3>
+                </article>
+            </section>
+
+            <section id="solutions">
+                <div id="solution-info">
+                    <h1>Como o NOÉ protege sua comunidade</h1>
+                    <h2>Uma plataforma integrada que combina tecnologia IoT, inteligência artificial e comunicação
+                        comunitária</h2>
                 </div>
 
                 <section id="ctn-card">
-                    <div id="card">
-                        <h1>sla oq colocar</h1>
-                        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae similique ullam aliquid quos quaerat a veritatis molestiae dolorem officia atque quis fugit quia doloremque illo voluptate officiis, perferendis ab eaque!</h2>
-                    </div>
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Monitoramento Inteligente</h1>
+                        <h2>Sensores IoT medem o nível de água em rios e córregos com atualização contínua</h2>
+                    </article>
 
-                    <div id="card">
-                        <h1>sla oq colocar</h1>
-                        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae similique ullam aliquid quos quaerat a veritatis molestiae dolorem officia atque quis fugit quia doloremque illo voluptate officiis, perferendis ab eaque!</h2>
-                    </div>
+                    <article id="card">
+                        <p>🌐</p>
+                        <h1>Previsão com IA</h1>
+                        <h2>Algoritmos analisam dados históricos e meteorológicos para prever enchentes com até 48h de
+                            antecedência</h2>
+                    </article>
 
-                    <div id="card">
-                        <h1>sla oq colocar</h1>
-                        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae similique ullam aliquid quos quaerat a veritatis molestiae dolorem officia atque quis fugit quia doloremque illo voluptate officiis, perferendis ab eaque!</h2>
-                    </div>
-
-                    <div id="card">
-                        <h1>sla oq colocar</h1>
-                        <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae similique ullam aliquid quos quaerat a veritatis molestiae dolorem officia atque quis fugit quia doloremque illo voluptate officiis, perferendis ab eaque!</h2>
-                    </div>
+                    <article id="card">
+                        <p>⚠️</p>
+                        <h1>Alertas Multicanal</h1>
+                        <h2>Comunicação via SMS, WhatsApp, aplicativo, sirenes e rádios comunitárias</h2>
+                    </article>
                 </section>
+            </section>
+        </div>
 
-                <div id="info-card">
-                    <h1>Informação Aleatoria</h1>
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos asperiores officia quidem obcaecati iure, sint inventore eius quae! Labore tempora tempore voluptates, recusandae harum enim amet velit beatae ab omnis. Asperiores minus sint dolore distinctio, sed alias animi cupiditate nisi veniam, possimus ea laborum odio odit temporibus commodi magni voluptates amet consequatur.</h2>
+
+        <!-- funcionamento -->
+        <div class="secao2">
+            <section id="como-funciona">
+                <div id="etapas">
+
+                    <h1>Como funciona o sistema</h1>
+
+                    <article class="ctn-conteudo">
+                        <div id="etapa-num">1</div>
+                        <div id="conteudo">
+                            <h1>Coleta de Dados</h1>
+                            <h2>Sensores instalados em pontos estratégicos coletam dados como nível da água e volume de
+                                chuva</h2>
+                        </div>
+                    </article>
+
+                    <article class="ctn-conteudo">
+                        <div id="etapa-num">2</div>
+                        <div id="conteudo">
+                            <h1>Análise em Tempo Real</h1>
+                            <h2>Dados são enviados para a nuvem onde a IA analisa o comportamento hidrológico</h2>
+                        </div>
+                    </article>
+
+                    <article class="ctn-conteudo">
+                        <div id="etapa-num">3</div>
+                        <div id="conteudo">
+                            <h1>Classificação de Risco</h1>
+                            <h2>Sistema classifica o risco em níveis (verde, amarelo, laranja, vermelho) com base em
+                                limiares pré-configurados</h2>
+                        </div>
+                    </article>
+
+                    <article class="ctn-conteudo">
+                        <div id="etapa-num">4</div>
+                        <div id="conteudo">
+                            <h1>Disparo de Alertas</h1>
+                            <h2>Alertas automáticos são enviados para população e autoridades quando o risco é
+                                identificado</h2>
+                        </div>
+                    </article>
                 </div>
-            </article>
+            </section>
+        </div>
 
-            <hr>
 
-            
-        </section>
+        <!-- diferenciais noe -->
+        <div class="secao3">
+            <section id="diferenciais">
+
+                <div class="tittle">
+                    <h1>O que torna o NOÉ único</h1>
+                </div>
+
+                <section id="ctn-card">
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Acessibilidade</h1>
+                        <h2>Funciona via SMS e aplicativo leve, com modo offline. Ideal para regiões de baixa
+                            conectividade.
+                        </h2>
+                    </article>
+
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Automatização Inteligente</h1>
+                        <h2>Identifica, avalia e comunica o risco sem depender da ação humana, com respostas em
+                            segundos.
+                        </h2>
+                    </article>
+
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Baixo Custo e Escalável</h1>
+                        <h2>Infraestrutura projetada para fácil implementação em municípios com orçamento limitado.
+                        </h2>
+                    </article>
+
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Engajamento Comunitário</h1>
+                        <h2>Cidadãos não são apenas receptores, mas colaboradores ativos do sistema.
+                        </h2>
+                    </article>
+
+                    <article id="card">
+                        <p>💧</p>
+                        <h1>Integração com o Poder Público</h1>
+                        <h2>Painel de controle para prefeituras e Defesa Civil com gestão centralizada.
+                        </h2>
+                    </article>
+                </section>
+            </section>
+        </div>
+
+
+        <div class="secao4">
+            <section></section>
+        </div>
+
 
 
     </main>
