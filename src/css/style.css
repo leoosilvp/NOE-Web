@@ -29,6 +29,10 @@ body {
     background: var(--secundary-color);
 }
 
+hr{
+    border: 1px solid #cecece;
+}
+
 .hero {
     display: flex;
     justify-content: center;
@@ -109,7 +113,7 @@ nav ul li a:hover {
     color: var(--secundary-color);
     font-size: var(--font-tittle);
     font-weight: 400;
-    animation: text 15s infinite;
+    animation: text 11s infinite;
 
 }
 
@@ -117,17 +121,8 @@ nav ul li a:hover {
     color: #f5f5f5f5;
     font-size: var(--font-size);
     font-weight: 400;
-    animation: text 15s infinite;
+    animation: text 11s infinite;
 }
-
-
-/* escurecer a img */
-/* .hero-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #00000036;
-} */
 
 .scroll-down {
     position: absolute;
@@ -165,14 +160,95 @@ nav ul li a:hover {
 @keyframes text {
 
 
-    60% {
+    50% {
         transform: scale(1.1);
 
     }
 
 }
 
+.conteudo{
+    margin: 60px;
+}
 
+
+#info-bar{
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 0px 10px 2px #00000023;
+}
+
+#info{
+    text-align: center;
+
+}
+
+#info h1{
+    font-size:30px;
+    color: #c00000;
+}
+
+#info h2{
+    font-size:25px;
+    font-weight: 500;
+}
+
+#info h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#cards{
+    margin: 60px;
+}
+
+#info-card{
+    text-align: center;
+    margin: 60px;
+}
+
+#info-card h1{
+    font-size:30px;
+    color: #c00000;
+}
+
+#info-card h2{
+    text-align: justify;
+    font-size:25px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#ctn-card{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+#card{
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 0px 10px 2px #00000023;
+    transition: var(--transition);
+}
+
+#card:hover{
+    transform: translateY(-30px);
+}
+
+#card h1{
+    font-size:30px;
+    color: #c00000;
+    text-align: center;
+}
+
+#card h2{
+    text-align: center;
+    font-size:25px;
+    font-weight: 500;
+}
 
 /* style app */
 #error {
