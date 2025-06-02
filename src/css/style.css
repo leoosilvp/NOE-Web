@@ -40,6 +40,7 @@ hr {
     min-height: 720px;
     position: relative;
     background: url('../assets/img/fundo.png') no-repeat center center/cover;
+    z-index: 0;
 }
 
 .btn button {
@@ -126,7 +127,6 @@ nav ul li a:hover {
     font-size: 3rem;
     font-weight: 400;
     animation: text 11s infinite;
-
 }
 
 .subtitle {
@@ -670,7 +670,7 @@ footer .equipe li a {
     border: 1px solid var(--secundary-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
 
     header {
         margin: 30px;
@@ -684,7 +684,7 @@ footer .equipe li a {
         height: 100vh;
         top: 0px;
         background-color: #000000df;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(2px);
         transition: var(--transition);
     }
 
@@ -856,7 +856,7 @@ footer .equipe li a {
     #ctn-card-equipe {
         display: flex;
         justify-content: space-between;
-        margin-top: 100px;
+        margin-top: 90px;
         margin-left: 20px;
         gap: 20px;
     }
@@ -864,7 +864,7 @@ footer .equipe li a {
     #card-pessoal {
         max-width: 140px;
         min-width: 140px;
-        height: 40vh;
+        height: 42vh;
     }
 
     #card-pessoal:hover {
@@ -876,7 +876,7 @@ footer .equipe li a {
         left: 200px;
         max-width: 140px;
         min-width: 140px;
-        height: 40vh;
+        height: 42vh;
         scale: 1;
     }
 
