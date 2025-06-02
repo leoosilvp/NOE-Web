@@ -39,7 +39,7 @@ hr {
     height: 100vh;
     min-height: 720px;
     position: relative;
-    background: url('../assets/img/NOÉ.png') no-repeat center center/cover;
+    background: url('../assets/img/fundo.png') no-repeat center center/cover;
     z-index: 0;
 }
 
@@ -124,7 +124,7 @@ nav ul li a:hover {
 
 .title {
     color: var(--secundary-color);
-    font-size: var(--font-tittle);
+    font-size: 3rem;
     font-weight: 400;
     animation: text 11s infinite;
 
@@ -139,7 +139,7 @@ nav ul li a:hover {
 
 .scroll-down {
     position: absolute;
-    bottom: 30px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
@@ -147,6 +147,7 @@ nav ul li a:hover {
 }
 
 .scroll-down a {
+    text-decoration: none;
     color: white;
     font-size: 24px;
 }
@@ -179,6 +180,7 @@ nav ul li a:hover {
     }
 
 }
+
 
 
 /* barra info */
@@ -256,7 +258,6 @@ nav ul li a:hover {
 #card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 0px 10px 2px #00000023;
-
 }
 
 #card p {
@@ -427,7 +428,7 @@ nav ul li a:hover {
 }
 
 .card-sem:hover{
-    transform: scale(1.05);
+    animation: text 2s infinite linear;
 }
 
 #com-noe{
@@ -453,7 +454,7 @@ nav ul li a:hover {
 }
 
 .card-com:hover{
-    transform: scale(1.05);
+    animation: text 2s infinite linear;
 }
 
 
@@ -469,7 +470,13 @@ nav ul li a:hover {
 }
 
 #error h1 {
-    font-size: var(--font-tittle);
+    font-size: 60px;
+    animation: text 11s infinite;
+}
+
+#error h2{
+    animation: text 11s infinite;
+
 }
 
 #error span {
@@ -485,7 +492,7 @@ footer {
     align-items: center;
     padding: 20px;
     margin-top: 60px;
-    background: url('../assets/img/NOÉ.png') no-repeat bottom center/cover;
+    background: url('../assets/img/fundo.png') no-repeat bottom center/cover;
     background-size: 3000px;
     color: var(--secundary-color);
 }
@@ -503,25 +510,23 @@ footer .ctn-footer {
     display: flex;
 }
 
-.social-links {
+.links {
     display: flex;
-    gap: 20px;
 }
 
-.social-links a {
+.links a {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: transparent;
+    width: 90px;
+    height: 45px;
+    background: transparent;
     color: var(--light-color);
     transition: var(--transition);
 }
 
-.social-links a:hover {
+.links a:hover {
     border: 1px solid var(--secundary-color);
     transform: translateY(-5px);
 }
@@ -549,7 +554,8 @@ footer .equipe li a {
 }
 
 .direitos span a:hover {
-    text-decoration: underline;
+    padding: 3px;
+    border: 1px solid var(--secundary-color); 
 }
 
 @media (max-width: 768px) {
@@ -598,6 +604,19 @@ footer .equipe li a {
 
     .logo img {
         width: 100px;
+    }
+
+    .title {
+    animation: none;
+
+    }
+
+    .subtitle {
+        animation: none;
+    }
+
+    .btn button {
+        margin: 30px;
     }
 
     .secao1 {
@@ -672,6 +691,12 @@ footer .equipe li a {
     }
 
     #tabela-impacto{
+        display: none;
+    }
+
+    /* tabela responsiva para cell */
+    /* #tabela-impacto{
+        display: none;
         margin-top: 30px;
         flex-direction: column;  
         width: 100%;
@@ -700,5 +725,5 @@ footer .equipe li a {
 
     .card-com{
         padding: 20px;
-    }
+    } */
 }
