@@ -30,7 +30,7 @@
                     <li><a href="./src/pages/app.html">objetivos</a></li>
                     <li><a href="#">público</a></li>
                     <li><a href="#">benefícios</a></li>
-                    <li><a href="#">solução</a></li>
+                    <li><a href="#contato">solução</a></li>
                 </ul>
 
                 <div class="mobile-menu" id="mobileMenu">
@@ -111,172 +111,57 @@
             </section>
         </div>
 
-        <!-- funcionamento -->
-        <div class="secao2">
-            <section id="como-funciona">
-                <div id="etapas">
+        <!-- Contact Section -->
+        <section class="contact">
+            <div id="contato">
+                <h2>Fale Conosco</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Seu nome" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <select id="subject" required>
+                            <option value="" disabled selected>Selecione o assunto</option>
+                            <option value="community">Sou da comunidade</option>
+                            <option value="government">Represento o governo</option>
+                            <option value="partner">Quero ser parceiro</option>
+                        </select>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Sua mensagem" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                        <button type="submit">ENVIAR</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-                    <h1>Como funciona o sistema</h1>
-
-                    <article class="ctn-conteudo">
-                        <div id="etapa-num">
-                            <h1>1</h1>
-                        </div>
-                        <div id="conteudo">
-                            <h1>Coleta de Dados</h1>
-                            <h2>Sensores instalados em pontos estratégicos coletam dados como nível da água e volume de
-                                chuva</h2>
-                        </div>
-                    </article>
-
-                    <article class="ctn-conteudo">
-                        <div id="etapa-num">
-                            <h1>2</h1>
-                        </div>
-                        <div id="conteudo">
-                            <h1>Análise em Tempo Real</h1>
-                            <h2>Dados são enviados para a nuvem onde a IA analisa o comportamento hidrológico</h2>
-                        </div>
-                    </article>
-
-                    <article class="ctn-conteudo">
-                        <div id="etapa-num">
-                            <h1>3</h1>
-                        </div>
-                        <div id="conteudo">
-                            <h1>Classificação de Risco</h1>
-                            <h2>Sistema classifica o risco em níveis (verde, amarelo, laranja, vermelho) com base em
-                                limiares pré-configurados</h2>
-                        </div>
-                    </article>
-
-                    <article class="ctn-conteudo">
-                        <div id="etapa-num">
-                            <h1>4</h1>
-                        </div>
-                        <div id="conteudo">
-                            <h1>Disparo de Alertas</h1>
-                            <h2>Alertas automáticos são enviados para população e autoridades quando o risco é
-                                identificado</h2>
-                        </div>
-                    </article>
+        <!-- Quiz Section -->
+        <section class="quiz">
+            <h2>Teste Seu Conhecimento!</h2>
+            <div class="quiz-container" id="quizContainer">
+                <div class="quiz-intro">
+                    <p>Responda nosso quiz e descubra como você pode se preparar melhor para enchentes.</p>
+                    <button id="startQuiz">INICIAR QUIZ</button>
                 </div>
-            </section>
-        </div>
-
-
-        <!-- diferenciais noe -->
-        <div class="secao3">
-            <section id="diferenciais">
-
-                <div class="tittle">
-                    <h1>O que torna o NOÉ único</h1>
+                <div class="quiz-questions" id="quizQuestions" style="display: none;">
+                    <div class="question" id="question"></div>
+                    <div class="options" id="options"></div>
+                    <button id="nextQuestion" style="display: none;">PRÓXIMA</button>
                 </div>
-
-                <section id="ctn-card">
-                    <article id="card">
-                        <p>📱</p>
-                        <h1>Acessibilidade</h1>
-                        <h2>Funciona via SMS e aplicativo leve, com modo offline. Ideal para regiões de baixa
-                            conectividade.
-                        </h2>
-                    </article>
-
-                    <article id="card">
-                        <p>💸</p>
-                        <h1>Baixo Custo e Escalável</h1>
-                        <h2>Infraestrutura projetada para fácil implementação em municípios com orçamento limitado.
-                        </h2>
-                    </article>
-
-                    <article id="card">
-                        <p>👥</p>
-                        <h1>Engajamento Comunitário</h1>
-                        <h2>Cidadãos não são apenas receptores, mas colaboradores ativos do sistema.
-                        </h2>
-                    </article>
-
-                    <article id="card">
-                        <p>🏛️</p>
-                        <h1>Integração com o Poder Público</h1>
-                        <h2>Painel de controle para prefeituras e Defesa Civil com gestão centralizada.
-                        </h2>
-                    </article>
-                </section>
-            </section>
-        </div>
-
-
-        <div class="secao4">
-            <article id="impacto">
-                <section class="social-economico">
-                    <h1>Impacto Social e Econômico</h1>
-                    <h2>O NOÉ transforma a forma como as cidades brasileiras enfrentam um dos maiores desafios
-                        climáticos.</h2>
-
-                    <div id="topic">
-                        <li></li>
-                        <h2><span>Redução de vítimas: </span>Alertas precoces permitem evacuação com segurança.</h2>
-                    </div>
-
-                    <div id="topic">
-                        <li></li>
-                        <h2><span>Economia de recursos: </span>Cada R$1 investido em prevenção economiza R$7 em
-                            reconstrução.</h2>
-                    </div>
-
-                    <div id="topic">
-                        <li></li>
-                        <h2><span>Dados para planejamento: </span>Histórico de eventos auxilia no planejamento urbano.
-                        </h2>
-                    </div>
-
-                    <div id="topic">
-                        <li></li>
-                        <h2><span>Empoderamento comunitário: </span>Transforma a percepção de passividade para preparo e
-                            ação.</h2>
-                    </div>
-                </section>
-            </article>
-
-            <section id="tabela-impacto">
-                <article id="sem-noe">
-                    <h1>Sem NOÉ</h1>
-
-                    <div class="card-sem">
-                        <h1>+70%</h1>
-                        <p>de danos materiais</p>
-                    </div>
-
-                    <div class="card-sem">
-                        <h1>+60%</h1>
-                        <p>de vítimas</p>
-                    </div>
-                </article>
-
-                <h2>Vs</h2>
-
-                <article id="com-noe">
-                    <h1>Com NOÉ</h1>
-
-                    <div class="card-com">
-                        <h1>-70%</h1>
-                        <p>tempo de evacuação</p>
-                    </div>
-
-                    <div class="card-com">
-                        <h1>90%</h1>
-                        <p>de Cobertura</p>
-                    </div>
-                </article>
-            </section>
-        </div>
-
-        <div class="secao5">
-            <section id=""></section>
-        </div>
-
-
+                <div class="quiz-result" id="quizResult" style="display: none;">
+                    <h3 id="resultTitle"></h3>
+                    <p id="resultText"></p>
+                    <button id="restartQuiz">REFAZER QUIZ</button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="footer">

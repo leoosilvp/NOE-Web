@@ -55,7 +55,7 @@ hr {
 }
 
 .btn button:hover {
-    color: #000000;
+    border-radius: 0 10px 0 10px;
     transform: scale(1.05);
 }
 
@@ -280,180 +280,218 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-/* funcionamento*/
 
-.secao2 {
-    background: #ecf0f1;
-    padding: 120px;
+
+/* Contact Form Styles */
+.contact {
+    background-color: transparent;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    justify-content: end;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #c00000;
+    font-size: var(--font-tittle);
+    margin-bottom: 60px;
+}
+
+form {
+    max-width: 600px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: 90px;
-}
-
-#etapas h1 {
-    font-size: var(--font-tittle);
-    font-weight: 700;
-    color: black;
-}
-
-.ctn-conteudo {
-    display: flex;
-    align-items: baseline;
-    margin-top: 30px;
-    margin-left: 130px;
-}
-
-#etapa-num h1 {
-    width: 40px;
-    height: 40px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--secundary-color);
-    background: var(--dark-color);
-    border-radius: 50%;
-    font-size: var(--font-tittle2);
-    font-weight: 800;
-    margin-right: 20px;
 }
 
-#conteudo h1 {
-    color: black;
-    font-size: var(--font-tittle2);
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--secundary-color);
+    box-shadow: 0px 0px 10px 2px #00000023;
+    border-radius: 10px;
+    font-size: var(--font-size2);
 }
 
-#conteudo h2 {
-    font-size: var(--font-size);
-    font-weight: 400;
-    margin-top: 10px;
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-message {
+    color: red;
+    font-size: var(--font-size2);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#contactForm button {
+    margin-top: 20px;
+    width: 120px;
+    height: 35px;
+    color: #000000;
+    background: transparent;
+    border: 1.5px solid;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#contactForm button:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #ffffff18;
+    transform: scale(1.1);
 }
 
 
-/* diferenciais noe */
-.secao3 {
-    margin: 120px;
+/* Quiz Styles */
+.quiz {
+    box-shadow: 0px 0px 10px 2px #00000023;
+    border-radius: 10px 10px 0px 0px;
+    padding: 30px;
     margin-top: 90px;
-    margin-bottom: 0;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--secundary-color);
 }
 
-.tittle h1 {
-    margin-bottom: 60px;
-    font-size: var(--font-tittle2);
+.quiz h2 {
+    margin-bottom: 10px;
+    font-size: var(--font-tittle);
     color: #c00000;
 }
 
-/* impacto */
-.secao4 {
-    background: #ecf0f1;
-    padding: 120px;
-    gap: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 90px;
+.quiz-container {
+    max-width: 800px;
+    min-width: 700px;
 }
 
-.social-economico {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
+.quiz-intro {
+    text-align: center;
 }
 
-.social-economico h1 {
-    font-size: var(--font-tittle);
-    font-weight: 700;
-    color: black;
-    margin-bottom: 20px;
-}
-
-.social-economico h2 {
+.quiz-intro p {
+    color: #808080;
     font-size: var(--font-size);
-    font-weight: 400;
+    font-weight: 500;
 }
 
-#topic {
+.quiz-intro button {
     margin-top: 30px;
-    margin-left: 30px;
-    display: flex;
-}
-
-#topic span {
-    font-size: var(--font-tittle2);
-    font-weight: 600;
-}
-
-#topic h2 {
-    font-size: var(--font-size);
-    font-weight: 400;
-}
-
-#tabela-impacto {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 630px;
-    border-radius: 10px;
-    padding: 50px;
-    background: #0000000f;
-}
-
-#tabela-impacto h2 {
-    font-size: var(--font-tittle2);
+    width: 120px;
+    height: 35px;
     color: #000000;
-    font-weight: 600;
-}
-
-#sem-noe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#sem-noe h1 {
-    font-size: var(--font-tittle2);
-}
-
-.card-sem {
-    min-width: 200px;
-    max-width: 200px;
-    margin-top: 20px;
-    padding: 30px;
-    border: 2px solid #000000;
-    border-radius: 0px;
-    color: var(--dark-color);
-    background: #ff00001a;
+    background: transparent;
+    border: 1.5px solid;
+    cursor: pointer;
     transition: var(--transition);
 }
 
-.card-sem:hover {
-    animation: text 2s infinite linear;
+.quiz-intro button:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #ffffff18;
+    transform: scale(1.1);
 }
 
-#com-noe {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-#com-noe h1 {
-    font-size: var(--font-tittle2);
-}
-
-.card-com {
-    min-width: 200px;
-    max-width: 200px;
-    margin-top: 20px;
-    padding: 30px;
-    border: 2px solid #000000;
-    color: var(--dark-color);
-    background: #22b8002b;
+#nextQuestion {
+    margin-top: 30px;
+    width: 120px;
+    height: 35px;
+    color: #000000;
+    background: transparent;
+    border: 1.5px solid;
+    cursor: pointer;
     transition: var(--transition);
 }
 
-.card-com:hover {
-    animation: text 2s infinite linear;
+#nextQuestion:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #0000003d;
+    transform: scale(1.1);
+}
+
+.quiz-questions {
+    display: none;
+}
+
+.quiz-questions .btn-secondary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question {
+    margin-bottom: 20px;
+    color: #808080;
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 15px;
+    background-color: #70707091;
+    color: var(--secundary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.option:hover {
+    transform: scale(1.01);
+    background-color: #3d3d3dcb;
+}
+
+.option.selected {
+    background-color: #3d3d3dcb;
+}
+
+.quiz-result {
+    text-align: center;
+    display: none;
+    color: #808080;
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+.quiz-result button {
+    margin-top: 30px;
+    width: 120px;
+    height: 35px;
+    color: #000000;
+    background: transparent;
+    border: 1.5px solid;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quiz-result button:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #0000003d;
+    transform: scale(1.1);
+}
+
+#resultTitle {
+    font-size: var(--font-size);
+    color: #000000;
+    font-weight: 500px;
+    margin-bottom: 10px;
 }
 
 
@@ -481,8 +519,6 @@ nav ul li a:hover {
 #error span {
     color: red;
 }
-
-
 
 /* style equipe */
 
@@ -592,10 +628,6 @@ nav ul li a:hover {
 }
 
 
-
-
-
-
 /* footer */
 footer {
     display: flex;
@@ -603,7 +635,6 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 60px;
     background: url('../assets/img/fundo.png') no-repeat bottom center/cover;
     background-size: 3000px;
     color: var(--secundary-color);
@@ -755,7 +786,6 @@ footer .equipe li a {
     }
 
 
-
     /* cards */
     #solutions {
         margin: 30px;
@@ -772,74 +802,6 @@ footer .equipe li a {
     #card:hover {
         transform: scale(1.02);
     }
-
-
-    /* funcionamento*/
-    .secao2 {
-        padding: 30px;
-    }
-
-    .ctn-conteudo {
-        margin-left: 0px;
-    }
-
-
-    /* diferenciais noe */
-    .secao3 {
-        margin: 30px;
-        margin-top: 90px;
-    }
-
-    .tittle h1 {
-        margin-bottom: 30px;
-        font-size: var(--font-tittle2);
-        color: #c00000;
-    }
-
-
-    /* impacto */
-    .secao4 {
-        padding: 30px;
-        gap: 0px;
-    }
-
-    #tabela-impacto {
-        display: none;
-    }
-
-    /* tabela responsiva para cell */
-    /* #tabela-impacto{
-        display: none;
-        margin-top: 30px;
-        flex-direction: column;  
-        width: 100%;
-        background: #0000000f;
-    }
-
-    #tabela-impacto h2{
-        display: none;
-    }
-
-    #sem-noe h1{
-        font-size: var(--font-tittle2);
-    }
-
-    .card-sem{
-        padding: 20px;
-    }
-
-    #com-noe{
-        margin-top: 30px;
-    }
-
-    #com-noe h1{
-        font-size: var(--font-tittle2);
-    }
-
-    .card-com{
-        padding: 20px;
-    } */
-
 
 
     /* error */
