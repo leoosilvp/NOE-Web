@@ -310,7 +310,8 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #c00000;
+    color: var(--secundary-color);
+    background: var(--dark-color);
     border-radius: 50%;
     font-size: var(--font-tittle2);
     font-weight: 800;
