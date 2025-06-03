@@ -40,6 +40,111 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector(`.theme-btn[data-theme="${savedTheme}"]`).classList.add('active');
 
 
+    // Carrossel de histórias
+    const storiesCarousel = document.querySelector('.stories-carousel');
+    if (storiesCarousel) {
+        const stories = document.querySelectorAll('.story');
+        let currentStory = 0;
+
+        function showStory(index) {
+            stories.forEach((story, i) => {
+                story.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextStory() {
+            currentStory = (currentStory + 1) % stories.length;
+            showStory(currentStory);
+        }
+
+        // Mostrar primeira história
+        showStory(currentStory);
+
+        // Trocar a cada 8 segundos
+        setInterval(nextStory, 8000);
+    }
+
+    // Carousel fots
+    const carousel = document.querySelector('.carousel-container');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+
+    let currentIndex = 0;
+    const slideCount = slides.length;
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        updateCarousel();
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto-advance carousel
+    let carouselInterval = setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    const carouselSection = document.querySelector('.solution-carousel');
+    carouselSection.addEventListener('mouseenter', () => {
+        clearInterval(carouselInterval);
+    });
+
+    carouselSection.addEventListener('mouseleave', () => {
+        carouselInterval = setInterval(nextSlide, 5000);
+    });
+
+
+    // Tabs de benefícios
+    const benefitTabButtons = document.querySelectorAll('.benefit-tab');
+    const benefitContents = document.querySelectorAll('.benefits-content');
+
+    benefitTabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const benefitId = this.getAttribute('data-benefit');
+
+            // Remover classe ativa de todos os botões e conteúdos
+            benefitTabButtons.forEach(btn => btn.classList.remove('active'));
+            benefitContents.forEach(content => content.classList.remove('active'));
+
+            // Adicionar classe ativa ao botão e conteúdo selecionado
+            this.classList.add('active');
+            document.getElementById(benefitId).classList.add('active');
+        });
+    });
+
+
     // Quiz Functionality
     const quizData = [
         {
