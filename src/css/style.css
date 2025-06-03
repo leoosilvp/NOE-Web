@@ -8,8 +8,7 @@
 }
 
 :root {
-    --primary-color: #0d2f5a;
-    --primary-color-light: #00449c;
+    --primary-color: #c00000;
     --secundary-color: #f5f5f5;
     --dark-color: #1e1e1e;
     --font-tittle: 2.1rem;
@@ -23,6 +22,13 @@
     --border-radius: 10px
 }
 
+[data-theme="yellow"] {
+    --primary-color: #f5d000;
+}
+
+[data-theme="green"] {
+    --primary-color: #29cf00;
+}
 
 body {
     font-family: "Bai Jamjuree";
@@ -108,6 +114,7 @@ nav ul li a:hover {
     transition: var(--transition);
 }
 
+/* logo */
 .logo img {
     display: flex;
     width: 150px;
@@ -180,7 +187,46 @@ nav ul li a:hover {
 
 }
 
+/* botao tema */
+.theme-switcher {
+    background-color: var(--secundary-color);
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
 
+.theme-switcher h1 {
+    font-size: var(--font-size2);
+}
+
+.theme-btn {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 1px #00000031;
+    transition: var(--transition);
+}
+
+.theme-btn.red {
+    color: #c00000;
+    background-color: #c00000;
+}
+
+.theme-btn.yellow {
+    background-color: #f5d000;
+}
+
+.theme-btn.green {
+    background-color: #29cf00;
+}
+
+.theme-btn.active {
+    transform: scale(1.1);
+}
 
 /* barra info */
 .secao1 {
@@ -205,7 +251,7 @@ nav ul li a:hover {
 
 #info h1 {
     font-size: var(--font-tittle);
-    color: #c00000;
+    color: var(--primary-color);
 }
 
 #info h3 {
@@ -213,7 +259,6 @@ nav ul li a:hover {
     font-size: var(--font-size);
     font-weight: 500;
 }
-
 
 /* cards */
 #solutions {
@@ -227,7 +272,7 @@ nav ul li a:hover {
 
 #solution-info h1 {
     font-size: var(--font-tittle2);
-    color: #c00000;
+    color: var(--primary-color);
 }
 
 #solution-info h2 {
@@ -252,6 +297,7 @@ nav ul li a:hover {
     border-radius: var(--border-radius);
     background: #ecf0f1;
     transition: var(--transition);
+    z-index: 0;
 }
 
 #card:hover {
@@ -268,7 +314,7 @@ nav ul li a:hover {
 #card h1 {
     font-size: var(--font-tittle2);
     font-weight: 700;
-    color: #c00000;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -279,9 +325,6 @@ nav ul li a:hover {
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
-
-
 
 
 
@@ -302,7 +345,7 @@ nav ul li a:hover {
 .quiz h2 {
     margin-bottom: 10px;
     font-size: var(--font-tittle);
-    color: #c00000;
+    color: var(--primary-color);
 }
 
 .quiz-container {
@@ -815,8 +858,8 @@ footer .equipe li a {
         justify-content: space-between;
         margin: 0;
         margin-top: 90px;
-        margin-left: 50px;
-        margin-right: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
         gap: 10px;
     }
 
@@ -831,18 +874,18 @@ footer .equipe li a {
         transform: scale(1.04);
     }
 
-    .dados h1{
+    .dados h1 {
         font-size: var(--font-size2);
     }
 
     .dados p {
-    margin-top: 10px;
-    font-size: var(--font-size2);
-    font-weight: 700;
-    color: #ffffff;
+        margin-top: 10px;
+        font-size: var(--font-size2);
+        font-weight: 700;
+        color: #ffffff;
     }
 
-    .dados h3{
+    .dados h3 {
         font-size: var(--font-size3);
         margin-bottom: 0;
     }
