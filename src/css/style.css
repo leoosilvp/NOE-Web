@@ -153,12 +153,13 @@ nav ul li a:hover {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    color: white;
     z-index: 1;
 }
 
-.scroll-down a {
-    text-decoration: none;
+.fa-chevron-down {
     color: white;
+    text-decoration: none;
     font-size: 24px;
 }
 
@@ -658,8 +659,6 @@ footer {
     align-items: center;
     padding: 20px;
     background: url('../assets/img/fundo.png') no-repeat bottom center/cover;
-    background-size: 3000px;
-    color: var(--secundary-color);
 }
 
 footer .logo img {
@@ -677,7 +676,7 @@ footer .ctn-footer {
 
 .links {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .links a {
@@ -685,10 +684,10 @@ footer .ctn-footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 90px;
-    height: 45px;
+    width: 100px;
+    height: 40px;
     background: transparent;
-    color: var(--light-color);
+    color: var(--secundary-color);
     transition: var(--transition);
 }
 
@@ -705,17 +704,18 @@ footer .equipe {
 footer .equipe li a {
     text-decoration: none;
     font-weight: 600;
-    color: var(--light-color);
+    color: var(--secundary-color);
 }
 
 .direitos h4 {
+    color: var(--secundary-color);
     font-size: var(--font-size2);
     font-weight: 400;
 }
 
 .direitos span a {
     text-decoration: none;
-    color: var(--light-color);
+    color: var(--secundary-color);
     transition: var(--transition);
 }
 
