@@ -5,25 +5,33 @@
     padding: 0;
     gap: 0;
     box-sizing: border-box;
+    color: var(--color);
 }
 
 :root {
+    --transition: all 0.4s ease;
+    --border-radius: 10px;
+    --box-shadow: 0px 0px 10px 2px #00000023;
+    --background: white;
     --primary-color: #c00000;
     --secundary-color: #f5f5f5;
+    --color: #1e1e1e;
+    --color-gen: #f5f5f5;
     --dark-color: #1e1e1e;
     --font-tittle: 2.1rem;
     --font-tittle2: 1.3rem;
     --font-size: 1.1rem;
     --font-size2: 0.9rem;
     --font-size3: 0.7rem;
-    --transition: all 0.4s ease;
-    --background: linear-gradient(90deg, #000000, #1e1e1e, #000000);
-    --background2: linear-gradient(90deg, #dbdbdb, #f5f5f5, #dbdbdb);
-    --border-radius: 10px
 }
 
 [data-theme="yellow"] {
     --primary-color: #f5d000;
+    --background: #1e1e1e;
+    --background-card: #2a2a2a;
+    --color: #f5f5f5;
+    --color-gen: #2a2a2a;
+    --box-shadow: 0px 0px 10px 2px #e9e9e94b;
 }
 
 [data-theme="green"] {
@@ -32,11 +40,7 @@
 
 body {
     font-family: "Bai Jamjuree";
-    background: white;
-}
-
-hr {
-    border: 1px solid #cecece;
+    background: var(--background);
 }
 
 .hero {
@@ -137,7 +141,7 @@ nav ul li a:hover {
 }
 
 .subtitle {
-    color: #f5f5f5f5;
+    color: var(--secundary-color);
     font-size: var(--font-size);
     font-weight: 400;
     animation: text 11s infinite;
@@ -190,7 +194,7 @@ nav ul li a:hover {
 /* botao tema */
 .theme-switcher {
     margin-bottom: 200px;
-    background-color: var(--secundary-color);
+    background-color: var(--color-gen);
     position: fixed;
     width: 100%;
     padding: 10px;
@@ -209,12 +213,11 @@ nav ul li a:hover {
     border-radius: 50%;
     border: 0px;
     cursor: pointer;
-    box-shadow: 0px 0px 4px 1px #00000031;
+    box-shadow: 0px 0px 7px 2px #00000025;
     transition: var(--transition);
 }
 
 .theme-btn.red {
-    color: #c00000;
     background-color: #c00000;
 }
 
@@ -243,7 +246,8 @@ nav ul li a:hover {
     padding: 30px;
     justify-content: space-evenly;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0px 0px 10px 2px #00000023;
+    background-color: var(--color-gen);
+    box-shadow: var(--box-shadow);
 }
 
 #info {
@@ -297,14 +301,13 @@ nav ul li a:hover {
     flex-direction: column;
     padding: 30px;
     border-radius: var(--border-radius);
-    background: #ecf0f1;
+    background: var(--color-gen);
     transition: var(--transition);
-    z-index: 0;
 }
 
 #card:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 0px 10px 2px #00000023;
+    box-shadow: var(--box-shadow);
 }
 
 #card p {
@@ -332,7 +335,7 @@ nav ul li a:hover {
 
 /* Quiz Styles */
 .quiz {
-    box-shadow: 0px 0px 10px 2px #00000023;
+    box-shadow: var(--box-shadow);
     border-radius: 10px 10px 0px 0px;
     padding: 30px;
     margin-top: 90px;
@@ -341,7 +344,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--secundary-color);
+    background: var(--color-gen);
 }
 
 .quiz h2 {
@@ -369,7 +372,7 @@ nav ul li a:hover {
     margin-top: 30px;
     width: 120px;
     height: 35px;
-    color: #000000;
+    color: var(--color);
     background: transparent;
     border: 1.5px solid;
     cursor: pointer;
@@ -378,7 +381,7 @@ nav ul li a:hover {
 
 .quiz-intro button:hover {
     border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #ffffff18;
+    box-shadow: var(--box-shadow);
     transform: scale(1.1);
 }
 
@@ -386,7 +389,7 @@ nav ul li a:hover {
     margin-top: 30px;
     width: 120px;
     height: 35px;
-    color: #000000;
+    color: var(--color);
     background: transparent;
     border: 1.5px solid;
     cursor: pointer;
@@ -395,7 +398,7 @@ nav ul li a:hover {
 
 #nextQuestion:hover {
     border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #0000003d;
+    box-shadow: var(--box-shadow);
     transform: scale(1.1);
 }
 
@@ -426,7 +429,7 @@ nav ul li a:hover {
     padding: 15px;
     background-color: #70707091;
     color: var(--secundary-color);
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: var(--transition);
 }
@@ -452,7 +455,7 @@ nav ul li a:hover {
     margin-top: 30px;
     width: 120px;
     height: 35px;
-    color: #000000;
+    color: var(--color);
     background: transparent;
     border: 1.5px solid;
     cursor: pointer;
@@ -461,13 +464,13 @@ nav ul li a:hover {
 
 .quiz-result button:hover {
     border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #0000003d;
+    box-shadow: var(--box-shadow);
     transform: scale(1.1);
 }
 
 #resultTitle {
     font-size: var(--font-size);
-    color: #000000;
+    color: var(--color);
     font-weight: 500px;
     margin-bottom: 10px;
 }
@@ -860,8 +863,8 @@ footer .equipe li a {
         justify-content: space-between;
         margin: 0;
         margin-top: 90px;
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 30px;
+        margin-right: 30px;
         gap: 10px;
     }
 
