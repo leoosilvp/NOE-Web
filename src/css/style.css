@@ -282,74 +282,7 @@ nav ul li a:hover {
 
 
 
-/* Contact Form Styles */
-.contact {
-    background-color: transparent;
-    margin-left: 60px;
-    margin-right: 60px;
-    display: flex;
-    justify-content: end;
-}
 
-.contact h2 {
-    text-align: center;
-    color: #c00000;
-    font-size: var(--font-tittle);
-    margin-bottom: 60px;
-}
-
-form {
-    max-width: 600px;
-    min-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid var(--secundary-color);
-    box-shadow: 0px 0px 10px 2px #00000023;
-    border-radius: 10px;
-    font-size: var(--font-size2);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 150px;
-}
-
-.error-message {
-    color: red;
-    font-size: var(--font-size2);
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
-#contactForm button {
-    margin-top: 20px;
-    width: 120px;
-    height: 35px;
-    color: #000000;
-    background: transparent;
-    border: 1.5px solid;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-#contactForm button:hover {
-    border-radius: 0 10px 0 10px;
-    box-shadow: 0px 0px 10px 2px #ffffff18;
-    transform: scale(1.1);
-}
 
 
 /* Quiz Styles */
@@ -495,7 +428,74 @@ form {
 }
 
 
+/* style contato */
+.contact {
+    background-color: transparent;
+    margin: 90px;
+    display: flex;
+    justify-content: end;
+}
 
+.contact h2 {
+    text-align: center;
+    color: var(--secundary-color);
+    font-size: var(--font-tittle);
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--secundary-color);
+    box-shadow: 10px 10px 5px 0px #0000004a;
+    border-radius: 10px;
+    font-size: var(--font-size2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.error-message {
+    color: red;
+    font-size: var(--font-size2);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#contactForm button {
+    margin-top: 30px;
+    width: 120px;
+    height: 35px;
+    color: var(--secundary-color);
+    background: transparent;
+    border: 2px solid;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#contactForm button:hover {
+    border-radius: 0 10px 0 10px;
+    box-shadow: 0px 0px 10px 2px #ffffff18;
+    transform: scale(1.1);
+}
 
 /* style app */
 #error {
@@ -545,7 +545,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 10px 10px 5px 0px #00000052;
+    box-shadow: 10px 10px 5px 0px #0000004a;
     border-radius: 20px 0px 20px 0px;
     transition: var(--transition);
 }
@@ -563,7 +563,7 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 10px 10px 5px 0px #00000052;
+    box-shadow: 10px 10px 5px 0px #0000004a;
     border-radius: 20px 0px 20px 0px;
     scale: 1.08;
     transition: var(--transition);
@@ -655,6 +655,7 @@ footer .ctn-footer {
 
 .links {
     display: flex;
+    gap: 10px;
 }
 
 .links a {
@@ -804,6 +805,25 @@ footer .equipe li a {
     }
 
 
+    /* Quiz Styles */
+    .quiz {
+        border-radius: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .quiz-container {
+        min-width: 300px;
+    }
+
+    .quiz-intro {
+        text-align: justify;
+    }
+
+    .quiz-result {
+        text-align: justify;
+    }
+
     /* error */
     #error h1 {
         font-size: 50px;
@@ -826,7 +846,7 @@ footer .equipe li a {
     #card-pessoal {
         max-width: 140px;
         min-width: 140px;
-        height: 42vh;
+        height: 43vh;
     }
 
     #card-pessoal:hover {
@@ -838,8 +858,15 @@ footer .equipe li a {
         left: 200px;
         max-width: 140px;
         min-width: 140px;
-        height: 42vh;
+        height: 43vh;
         scale: 1;
+    }
+
+     .dados p {
+    margin-top: 10px;
+    font-size: var(--font-size);
+    font-weight: 700;
+    color: #ffffff;
     }
 
     #card-pessoal-active:hover {
@@ -847,11 +874,46 @@ footer .equipe li a {
     }
 
     .redes {
-        margin-top: 5px;
+        margin-top: 0px;
         gap: 20px;
     }
 
     .redes img {
         width: 18px;
+    }
+
+    /* style contato */
+    .contact {
+        margin-top: 90px;
+        justify-content: center;
+    }
+
+    form {
+        max-width: 330px;
+        min-width: 330px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    /* style app */
+    #error {
+        color: var(--secundary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #error h1 {
+        font-size: 60px;
+        animation: text 11s infinite;
     }
 }
