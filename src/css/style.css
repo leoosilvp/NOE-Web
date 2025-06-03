@@ -659,6 +659,7 @@ footer {
     align-items: center;
     padding: 20px;
     background: url('../assets/img/fundo.png') no-repeat bottom center/cover;
+    background-size: 3000px;
 }
 
 footer .logo img {
